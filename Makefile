@@ -49,7 +49,7 @@ test: $(TESTFILES)
 	$(RM) $(TMP)/$@.pl
 	./cspmf.sh
 	@mv out $(TMP)/out
-	@diff "test/$@" $(TMP)/out || \
+	diff "test/$@" $(TMP)/out || \
 	(echo "Test $@ failed" && exit 1)
 
 
