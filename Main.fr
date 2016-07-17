@@ -1,0 +1,3 @@
+module Main.Main where
+
+main = writeFile "out" "42\n"
