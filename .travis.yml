@@ -1,4 +1,6 @@
-language: java
+language:
+  - java
+  - haskell
 
 jdk:
   - oraclejdk8
