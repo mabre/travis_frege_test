@@ -1,4 +1,7 @@
-language: haskell
+language: java
+
+sudo: required
+dist: trusty
 
 jdk:
   - oraclejdk8
@@ -7,13 +10,12 @@ addons:
   apt:
     packages:
       - oracle-java8-installer
+      - alex-3.1.7
 
-install:
-  - cabal install alex-3.1.7
+before_script:
   - curl -L -o frege.jar https://github.com/Frege/frege/releases/download/3.23.288/frege3.23.422-ga05a487.jar
 
 script:
 - alex --version
-- javac -version
 - make dist
 - make test
