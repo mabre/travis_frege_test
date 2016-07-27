@@ -14,5 +14,6 @@ install:
 
 script:
 - alex --version
+- javac -version
 - make dist
 - make test
