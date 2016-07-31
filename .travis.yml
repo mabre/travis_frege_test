@@ -12,7 +12,7 @@ addons:
       - oracle-java8-installer
 
 before_script:
-  - sudo apt-get install -yq cabal-install proguard
+  - sudo apt-get install -yq cabal-install
   - cabal update
   - cabal install alex-3.1.7
   - PATH=$PATH:$HOME/.cabal/bin
